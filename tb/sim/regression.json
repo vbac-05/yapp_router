@@ -1,0 +1,23 @@
+{
+  "description": "Positive and deliberate negative tests are classified separately.",
+  "tests": [
+    {"name":"router_smoke_test","suites":["smoke","core"],"seeds":[1]},
+    {"name":"router_packet_api_test","suites":["core"],"seeds":[1]},
+    {"name":"router_boundary_test","suites":["core"],"seeds":[1]},
+    {"name":"router_drop_test","suites":["core"],"seeds":[1]},
+    {"name":"router_parity_test","suites":["core"],"seeds":[1]},
+    {"name":"router_backpressure_test","suites":["core"],"seeds":[1,7]},
+    {"name":"router_reset_test","suites":["core"],"seeds":[1,7]},
+    {"name":"router_virtual_test","suites":["core"],"seeds":[1]},
+    {"name":"router_random_test","suites":["core"],"seeds":[1,7,42]},
+    {"name":"router_factory_test","suites":["core"],"seeds":[1]},
+    {"name":"router_register_test","suites":["core"],"seeds":[1]},
+    {"name":"router_enable_bits_test","suites":["core"],"seeds":[1]},
+    {"name":"router_memory_test","suites":["core"],"seeds":[1]},
+    {"name":"router_counter_wrap_test","suites":["core"],"seeds":[1]},
+    {"name":"router_backdoor_test","suites":["extended"],"seeds":[1]},
+    {"name":"router_memory_walk_test","suites":["extended"],"seeds":[1]},
+    {"name":"router_scoreboard_negative_test","suites":["negative"],"seeds":[1],"expected_errors":["PACKET_MISMATCH"]},
+    {"id":"router_memory_fault_test","name":"router_memory_test","suites":["negative"],"seeds":[1],"defines":["INJECT_ERROR"],"expected_errors":["HBUS_MISMATCH","MEMORY_DATA"]}
+  ]
+}

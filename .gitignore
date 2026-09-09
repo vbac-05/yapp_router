@@ -1,0 +1,6 @@
+tb/sim/results/
+tb/tools/__pycache__/
+*.vcd
+*.wlf
+# Private Cadence training reference: do not accidentally add to a repository.
+/RTL/reference/cadence_yapp_router.sv
